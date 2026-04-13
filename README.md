@@ -105,7 +105,7 @@ The WhatsApp button is automatically created by `global.js`. To customize it:
 ```javascript
 // Configuration
 const config = {
-  phoneNumber: '919510400470',        // Change phone number here
+  phoneNumber: 'xxxxx',        // Change phone number here
   message: 'Hi, I would like to know more about your services',  // Change message
   position: { bottom: '24px', right: '24px' }  // Change position
 };
