@@ -19,3 +19,4 @@ zyvexis-website-improved/
 │   └── images/
 │       └── logo.svg        # Company logo
 └── README.md               # This file
+```
