@@ -24,17 +24,17 @@
   // ============================================
   // Active Link Highlighting
   // ============================================
+  
   function setActiveLink() {
-    const rawPath = location.pathname.split('/').pop() || 'index.html';
-    const currentPage = rawPath === '' || rawPath === '/' ? 'index.html' : rawPath.toLowerCase();
+  let path = window.location.pathname;
+  if (path === "/" || path === "") {  path = "index.html";} else {path = path.replace(/^\//, ""); }
+  const navLinks = document.querySelectorAll('.nav-links a[data-page]');
+  navLinks.forEach((link) => {const linkPage = link.getAttribute('data-page');
+  if (linkPage === path) {link.classList.add('active');} else {  link.classList.remove('active');}
+  });
+}
 
-    document.querySelectorAll('.nav-links a[data-page]').forEach((link) => {
-      const linkPage = (link.getAttribute('data-page') || 'index.html').toLowerCase();
-      const isActive = linkPage === currentPage;
-      link.classList.toggle('active', isActive);
-    });
-  }
-
+  
   // ============================================
   // Mobile Menu Toggle
   // ============================================
